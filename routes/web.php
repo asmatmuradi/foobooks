@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomeController');
+
+Route::get('/book', 'BookController@index');
+Route::get('/book/{title}','BookController@show');
